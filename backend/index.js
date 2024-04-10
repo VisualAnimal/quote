@@ -17,7 +17,7 @@ app.use(express.json());
 // Option 2: Allow Custom Origins
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'chai.nfiii.cn:8080',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'],
   })
