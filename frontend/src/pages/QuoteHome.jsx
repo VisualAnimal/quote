@@ -7,7 +7,7 @@ function QuoteList() {
   useEffect(() => {
     async function fetchQuotes() {
       try {
-        const response = await axios.get('http://localhost:5555/quote');
+        const response = await axios.get('chai.nfiii.cn:5555/quote');
         setQuotes(response.data);
       } catch (error) {
         console.error('Error fetching quotes:', error);

@@ -23,7 +23,7 @@ function AddQuoteForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:5555/quote', formData);
+      await axios.post('chai.nfiii.cn:5555/quote', formData);
       alert('Quote added successfully!');
       // Optionally, you can reset the form fields after successful submission
       setFormData({
