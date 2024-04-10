@@ -4,6 +4,8 @@ import mongoose from 'mongoose';
 import booksRoute from './routes/booksRoute.js';
 import cors from 'cors';
 
+import quoteRoute from './routes/quoteRoute.js'
+
 const app = express();
 
 // Middleware for parsing request body
@@ -27,6 +29,7 @@ app.get('/', (request, response) => {
 });
 
 app.use('/books', booksRoute);
+app.use('/quote', quoteRoute)
 
 mongoose
   .connect(mongoDBURL)
