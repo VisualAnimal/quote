@@ -6,7 +6,7 @@ const router = express.Router();
 // GET all quotes
 router.get('/', async (req, res) => {
   try {
-    const quotes = await Quote.find();
+    const quotes = await Quote.find().sort('-updatedAt');
     res.json(quotes);
   } catch (err) {
     res.status(500).json({ message: err.message });
